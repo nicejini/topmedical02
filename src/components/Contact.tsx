@@ -51,30 +51,47 @@ const Contact: React.FC<ContactProps> = ({ isModal = false }) => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // 여기서 실제 폼 제출 로직이 들어갑니다.
-    // 예시로 성공 메시지를 보여줍니다.
-    setFormStatus({
-      success: true,
-      message: '상담 신청이 완료되었습니다. 빠른 시일 내에 연락드리겠습니다.'
-    });
-    
-    // 폼 데이터 초기화
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      hospitalType: '',
-      message: '',
-      agreement: false
-    });
+    try {
+      const response = await fetch('http://localhost:5000/api/consultation', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
-    // 성공 시 3초 후 모달 닫기 (모달 모드인 경우)
-    if (isModal) {
-      setTimeout(() => {
-        closeContactModal();
-      }, 3000);
+      if (response.ok) {
+        setFormStatus({
+          success: true,
+          message: '상담 신청이 완료되었습니다. 빠른 시일 내에 연락드리겠습니다.'
+        });
+        
+        // 폼 데이터 초기화
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          hospitalType: '',
+          message: '',
+          agreement: false
+        });
+
+        // 성공 시 3초 후 모달 닫기 (모달 모드인 경우)
+        if (isModal) {
+          setTimeout(() => {
+            closeContactModal();
+          }, 3000);
+        }
+      } else {
+        throw new Error('서버 오류가 발생했습니다.');
+      }
+    } catch (error) {
+      setFormStatus({
+        success: false,
+        message: '상담 신청 중 오류가 발생했습니다. 잠시 후 다시 시도해주세요.'
+      });
     }
   };
 
