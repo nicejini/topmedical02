@@ -1,0 +1,174 @@
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  background-color: transparent;
+}
+
+.header.scrolled {
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  height: 60px;
+  width: auto;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  margin-left: 30px;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.scrolled .nav-link {
+  color: #333;
+}
+
+.nav-link:hover {
+  color: #4c9ce5;
+}
+
+.cta-button {
+  background-color: #4c9ce5;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: 30px;
+}
+
+.cta-button:hover {
+  background-color: #3d7eb9;
+  transform: translateY(-2px);
+}
+
+.mobile-menu-toggle {
+  display: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  padding: 5px;
+}
+
+.scrolled .mobile-menu-toggle {
+  color: #333;
+}
+
+/* 태블릿 스타일 */
+@media (max-width: 992px) {
+  .nav-item {
+    margin-left: 20px;
+  }
+  
+  .cta-button {
+    padding: 8px 15px;
+    font-size: 14px;
+    margin-left: 20px;
+  }
+  
+  .logo {
+    height: 50px;
+  }
+}
+
+/* 모바일 스타일 */
+@media (max-width: 768px) {
+  .header-container {
+    padding: 0 15px;
+  }
+
+  .logo {
+    height: 40px;
+  }
+  
+  .nav {
+    position: relative;
+  }
+  
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100vw;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    z-index: 1000;
+    text-align: center;
+  }
+  
+  .nav-list.visible {
+    display: flex;
+  }
+  
+  .nav-item {
+    margin: 10px 0;
+    text-align: center;
+  }
+  
+  .nav-link {
+    color: #333;
+    font-size: 18px;
+    display: block;
+    padding: 10px 0;
+  }
+  
+  .mobile-menu-toggle {
+    display: block;
+    margin-right: 10px;
+  }
+  
+  .cta-button {
+    margin-left: 0;
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+} 
