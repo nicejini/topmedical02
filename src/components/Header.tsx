@@ -42,7 +42,7 @@ const Header: React.FC = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <Link to="/">
+          <Link to="/" className="logo-link">
             <img src={logoSvg} alt="탑메디컬 로고" className="logo" />
           </Link>
         </motion.div>
@@ -59,13 +59,13 @@ const Header: React.FC = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <li className="nav-item">
+              <Link to="/" className="nav-link">홈</Link>
+            </li>
+            <li className="nav-item">
               <Link to="/services" className="nav-link">서비스</Link>
             </li>
             <li className="nav-item">
               <Link to="/about" className="nav-link">소개</Link>
-            </li>
-            <li className="nav-item">
-              <a href="#process" className="nav-link">진행 과정</a>
             </li>
           </motion.ul>
           
@@ -74,13 +74,12 @@ const Header: React.FC = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <a 
-              href="#" 
+            <button 
               className="cta-button"
               onClick={handleContactClick}
             >
               무료 상담 신청
-            </a>
+            </button>
           </motion.div>
         </nav>
       </div>

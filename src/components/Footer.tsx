@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -84,29 +85,29 @@ const Footer: React.FC = () => {
             <h4 style={{ color: 'white', fontSize: '1.2rem', marginBottom: '1.5rem', fontWeight: 600 }}>주요 서비스</h4>
             <ul style={{ listStyle: 'none', padding: 0 }}>
               <li style={{ marginBottom: '0.8rem' }}>
-                <a href="#" style={{ color: '#ADB5BD', textDecoration: 'none', transition: 'color 0.3s' }}>
+                <Link to="/services" style={{ color: '#ADB5BD', textDecoration: 'none', transition: 'color 0.3s' }}>
                   병원 입지 분석
-                </a>
+                </Link>
               </li>
               <li style={{ marginBottom: '0.8rem' }}>
-                <a href="#" style={{ color: '#ADB5BD', textDecoration: 'none', transition: 'color 0.3s' }}>
+                <Link to="/services" style={{ color: '#ADB5BD', textDecoration: 'none', transition: 'color 0.3s' }}>
                   인테리어 설계 및 시공
-                </a>
+                </Link>
               </li>
               <li style={{ marginBottom: '0.8rem' }}>
-                <a href="#" style={{ color: '#ADB5BD', textDecoration: 'none', transition: 'color 0.3s' }}>
+                <Link to="/services" style={{ color: '#ADB5BD', textDecoration: 'none', transition: 'color 0.3s' }}>
                   의료 장비 구매 컨설팅
-                </a>
+                </Link>
               </li>
               <li style={{ marginBottom: '0.8rem' }}>
-                <a href="#" style={{ color: '#ADB5BD', textDecoration: 'none', transition: 'color 0.3s' }}>
+                <Link to="/services" style={{ color: '#ADB5BD', textDecoration: 'none', transition: 'color 0.3s' }}>
                   마케팅 솔루션
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" style={{ color: '#ADB5BD', textDecoration: 'none', transition: 'color 0.3s' }}>
+                <Link to="/services" style={{ color: '#ADB5BD', textDecoration: 'none', transition: 'color 0.3s' }}>
                   결제 시스템 구축
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -115,29 +116,29 @@ const Footer: React.FC = () => {
             <h4 style={{ color: 'white', fontSize: '1.2rem', marginBottom: '1.5rem', fontWeight: 600 }}>회사 정보</h4>
             <ul style={{ listStyle: 'none', padding: 0 }}>
               <li style={{ marginBottom: '0.8rem' }}>
-                <a href="#" style={{ color: '#ADB5BD', textDecoration: 'none', transition: 'color 0.3s' }}>
+                <Link to="/company-info" style={{ color: '#ADB5BD', textDecoration: 'none', transition: 'color 0.3s' }}>
                   회사 소개
-                </a>
+                </Link>
               </li>
               <li style={{ marginBottom: '0.8rem' }}>
-                <a href="#" style={{ color: '#ADB5BD', textDecoration: 'none', transition: 'color 0.3s' }}>
+                <Link to="/terms" style={{ color: '#ADB5BD', textDecoration: 'none', transition: 'color 0.3s' }}>
                   이용 약관
-                </a>
+                </Link>
               </li>
               <li style={{ marginBottom: '0.8rem' }}>
-                <a href="#" style={{ color: '#ADB5BD', textDecoration: 'none', transition: 'color 0.3s' }}>
+                <Link to="/privacy" style={{ color: '#ADB5BD', textDecoration: 'none', transition: 'color 0.3s' }}>
                   개인정보 처리방침
-                </a>
+                </Link>
               </li>
               <li style={{ marginBottom: '0.8rem' }}>
-                <a href="#" style={{ color: '#ADB5BD', textDecoration: 'none', transition: 'color 0.3s' }}>
+                <Link to="/careers" style={{ color: '#ADB5BD', textDecoration: 'none', transition: 'color 0.3s' }}>
                   채용 정보
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" style={{ color: '#ADB5BD', textDecoration: 'none', transition: 'color 0.3s' }}>
+                <Link to="/contact" style={{ color: '#ADB5BD', textDecoration: 'none', transition: 'color 0.3s' }}>
                   문의하기
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -192,9 +193,9 @@ const Footer: React.FC = () => {
             &copy; {currentYear} 탑메디컬. 모든 권리 보유.
           </div>
           <div>
-            <a href="#" style={{ color: '#ADB5BD', textDecoration: 'none', margin: '0 0.5rem' }}>개인정보처리방침</a>
-            <a href="#" style={{ color: '#ADB5BD', textDecoration: 'none', margin: '0 0.5rem' }}>이용약관</a>
-            <a href="#" style={{ color: '#ADB5BD', textDecoration: 'none', margin: '0 0.5rem' }}>사이트맵</a>
+            <Link to="/privacy" style={{ color: '#ADB5BD', textDecoration: 'none', margin: '0 0.5rem' }}>개인정보처리방침</Link>
+            <Link to="/terms" style={{ color: '#ADB5BD', textDecoration: 'none', margin: '0 0.5rem' }}>이용약관</Link>
+            <Link to="/sitemap" style={{ color: '#ADB5BD', textDecoration: 'none', margin: '0 0.5rem' }}>사이트맵</Link>
           </div>
         </div>
       </div>

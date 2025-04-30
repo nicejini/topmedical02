@@ -89,7 +89,7 @@ const popularServices = [
     id: 2,
     title: '의료기기 패키지',
     description: '진료과별 최적의 의료장비 구성',
-    image: 'https://images.pexels.com/photos/1576091/pexels-photo-1576091.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+    image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80'
   },
   {
     id: 3,

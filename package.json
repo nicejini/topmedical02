@@ -1,7 +1,7 @@
 {
   "name": "hospital-services",
   "version": "0.1.0",
-  "homepage": "https://topmedical.co.kr",
+  "homepage": "https://nicejini.github.io/topmedical02/",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",

@@ -1,7 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { ModalContext } from '../App';
 
 const Hero: React.FC = () => {
+  const { openContactModal } = React.useContext(ModalContext);
+
+  const handleContactClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    openContactModal();
+  };
+
   return (
     <section className="hero" style={{ 
       position: 'relative',
@@ -78,7 +87,7 @@ const Hero: React.FC = () => {
             className="hero-cta"
             style={{ display: 'flex', gap: '1.5rem' }}
           >
-            <a href="#services" className="btn" style={{ 
+            <Link to="/services" className="btn" style={{ 
               backgroundColor: 'white', 
               color: 'var(--primary-color)', 
               fontWeight: '600',
@@ -87,22 +96,28 @@ const Hero: React.FC = () => {
               fontSize: '1.1rem',
               boxShadow: '0 4px 15px rgba(0, 0, 0, 0.2)',
               transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-              border: 'none'
+              border: 'none',
+              textDecoration: 'none'
             }}>
               서비스 알아보기
-            </a>
-            <a href="#contact" className="btn" style={{ 
-              backgroundColor: 'transparent', 
-              border: '2px solid white',
-              color: 'white',
-              fontWeight: '600',
-              padding: '1rem 2rem',
-              borderRadius: '50px',
-              fontSize: '1.1rem',
-              transition: 'background-color 0.3s ease'
-            }}>
+            </Link>
+            <button 
+              onClick={handleContactClick}
+              className="btn" 
+              style={{ 
+                backgroundColor: 'transparent', 
+                border: '2px solid white',
+                color: 'white',
+                fontWeight: '600',
+                padding: '1rem 2rem',
+                borderRadius: '50px',
+                fontSize: '1.1rem',
+                transition: 'background-color 0.3s ease',
+                cursor: 'pointer'
+              }}
+            >
               무료 상담 신청
-            </a>
+            </button>
           </motion.div>
           
           <motion.div
