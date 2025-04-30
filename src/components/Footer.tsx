@@ -136,8 +136,8 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/contact" style={{ color: '#ADB5BD', textDecoration: 'none', transition: 'color 0.3s' }}>
-                  문의하기
+                <Link to="/partner" style={{ color: '#ADB5BD', textDecoration: 'none', transition: 'color 0.3s' }}>
+                  협력업체 모집
                 </Link>
               </li>
             </ul>

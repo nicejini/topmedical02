@@ -12,6 +12,7 @@ import CompanyInfo from './components/CompanyInfo';
 import TermsOfService from './components/TermsOfService';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import Careers from './components/Careers';
+import Partner from './components/Partner';
 import './App.css';
 
 // 모달 상태 컨텍스트 생성
@@ -53,6 +54,7 @@ const App: React.FC = () => {
             <Route path="/terms" element={<TermsOfService />} />
             <Route path="/privacy" element={<PrivacyPolicy />} />
             <Route path="/careers" element={<Careers />} />
+            <Route path="/partner" element={<Partner />} />
           </Routes>
           <Footer />
           

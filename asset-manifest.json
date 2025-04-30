@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/topmedical02/static/css/main.af2d23d6.css",
+    "main.js": "/topmedical02/static/js/main.286996b7.js",
+    "static/js/453.4cefbe9d.chunk.js": "/topmedical02/static/js/453.4cefbe9d.chunk.js",
+    "static/media/logo.svg": "/topmedical02/static/media/logo.7689b14da14200dd2bd0dc371be17e7a.svg",
+    "index.html": "/topmedical02/index.html",
+    "main.af2d23d6.css.map": "/topmedical02/static/css/main.af2d23d6.css.map",
+    "main.286996b7.js.map": "/topmedical02/static/js/main.286996b7.js.map",
+    "453.4cefbe9d.chunk.js.map": "/topmedical02/static/js/453.4cefbe9d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.af2d23d6.css",
+    "static/js/main.286996b7.js"
+  ]
+}

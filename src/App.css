@@ -89,3 +89,49 @@
   cursor: pointer;
   z-index: 10001;
 }
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Add padding to the top of the main content to prevent overlap with fixed header */
+main {
+  padding-top: 200px; /* 임시로 크게 설정 */
+  flex: 1;
+}
+
+/* Container styles for consistent spacing */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Page content styles */
+.page-content {
+  padding: 40px 0;
+  min-height: calc(100vh - 120px - 300px); /* Adjusted based on new header padding */
+}
+
+/* Section spacing */
+.section {
+  padding: 60px 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  main {
+    padding-top: 160px; /* 모바일도 크게 설정 */
+  }
+  
+  .page-content {
+    padding: 20px 0;
+    min-height: calc(100vh - 160px - 300px);
+  }
+  
+  .section {
+    padding: 40px 0;
+  }
+}
