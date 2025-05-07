@@ -249,27 +249,6 @@ const Contact: React.FC<ContactProps> = ({ isModal = false }) => {
                       <div style={{ fontSize: '1.2rem' }}>contact@topmedical.co.kr</div>
                     </div>
                   </div>
-                  
-                  <div style={{ display: 'flex', alignItems: 'center' }}>
-                    <div style={{ 
-                      width: '56px', 
-                      height: '56px', 
-                      borderRadius: '50%', 
-                      backgroundColor: 'rgba(255, 255, 255, 0.2)', 
-                      display: 'flex', 
-                      alignItems: 'center', 
-                      justifyContent: 'center',
-                      color: 'white',
-                      marginRight: '1.5rem',
-                      fontSize: '1.5rem'
-                    }}>
-                      🏢
-                    </div>
-                    <div>
-                      <div style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.3rem' }}>본사 위치</div>
-                      <div style={{ fontSize: '1.2rem' }}>서울시 강남구 테헤란로 123</div>
-                    </div>
-                  </div>
                 </div>
                 
                 <div style={{ marginTop: '3rem' }}>
