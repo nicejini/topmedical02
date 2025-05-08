@@ -21,19 +21,46 @@ export const ModalContext = createContext({
   closeContactModal: () => {},
   openPartnerModal: () => {},
   closePartnerModal: () => {},
+  openCompanyInfoModal: () => {},
+  closeCompanyInfoModal: () => {},
+  openTermsModal: () => {},
+  closeTermsModal: () => {},
+  openPrivacyModal: () => {},
+  closePrivacyModal: () => {},
+  openCareersModal: () => {},
+  closeCareersModal: () => {},
 });
 
 const App: React.FC = () => {
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
   const [isPartnerModalOpen, setIsPartnerModalOpen] = useState(false);
+  const [isCompanyInfoModalOpen, setIsCompanyInfoModalOpen] = useState(false);
+  const [isTermsModalOpen, setIsTermsModalOpen] = useState(false);
+  const [isPrivacyModalOpen, setIsPrivacyModalOpen] = useState(false);
+  const [isCareersModalOpen, setIsCareersModalOpen] = useState(false);
 
   const openContactModal = () => setIsContactModalOpen(true);
   const closeContactModal = () => setIsContactModalOpen(false);
   const openPartnerModal = () => setIsPartnerModalOpen(true);
   const closePartnerModal = () => setIsPartnerModalOpen(false);
+  const openCompanyInfoModal = () => setIsCompanyInfoModalOpen(true);
+  const closeCompanyInfoModal = () => setIsCompanyInfoModalOpen(false);
+  const openTermsModal = () => setIsTermsModalOpen(true);
+  const closeTermsModal = () => setIsTermsModalOpen(false);
+  const openPrivacyModal = () => setIsPrivacyModalOpen(true);
+  const closePrivacyModal = () => setIsPrivacyModalOpen(false);
+  const openCareersModal = () => setIsCareersModalOpen(true);
+  const closeCareersModal = () => setIsCareersModalOpen(false);
 
   return (
-    <ModalContext.Provider value={{ openContactModal, closeContactModal, openPartnerModal, closePartnerModal }}>
+    <ModalContext.Provider value={{
+      openContactModal, closeContactModal,
+      openPartnerModal, closePartnerModal,
+      openCompanyInfoModal, closeCompanyInfoModal,
+      openTermsModal, closeTermsModal,
+      openPrivacyModal, closePrivacyModal,
+      openCareersModal, closeCareersModal
+    }}>
       <HashRouter basename="/">
         <div className="app">
           <Header />
@@ -55,7 +82,6 @@ const App: React.FC = () => {
             <Route path="/careers" element={<Careers />} />
           </Routes>
           <Footer />
-          
           {isContactModalOpen && (
             <div className="modal-overlay" onClick={closeContactModal}>
               <div className="modal-content" onClick={e => e.stopPropagation()}>
@@ -69,6 +95,38 @@ const App: React.FC = () => {
               <div className="modal-content" onClick={e => e.stopPropagation()}>
                 <button className="close-button" onClick={closePartnerModal}>×</button>
                 <Partner closePartnerModal={closePartnerModal} />
+              </div>
+            </div>
+          )}
+          {isCompanyInfoModalOpen && (
+            <div className="modal-overlay" onClick={closeCompanyInfoModal}>
+              <div className="modal-content" onClick={e => e.stopPropagation()}>
+                <button className="close-button" onClick={closeCompanyInfoModal}>×</button>
+                <CompanyInfo />
+              </div>
+            </div>
+          )}
+          {isTermsModalOpen && (
+            <div className="modal-overlay" onClick={closeTermsModal}>
+              <div className="modal-content" onClick={e => e.stopPropagation()}>
+                <button className="close-button" onClick={closeTermsModal}>×</button>
+                <TermsOfService />
+              </div>
+            </div>
+          )}
+          {isPrivacyModalOpen && (
+            <div className="modal-overlay" onClick={closePrivacyModal}>
+              <div className="modal-content" onClick={e => e.stopPropagation()}>
+                <button className="close-button" onClick={closePrivacyModal}>×</button>
+                <PrivacyPolicy />
+              </div>
+            </div>
+          )}
+          {isCareersModalOpen && (
+            <div className="modal-overlay" onClick={closeCareersModal}>
+              <div className="modal-content" onClick={e => e.stopPropagation()}>
+                <button className="close-button" onClick={closeCareersModal}>×</button>
+                <Careers />
               </div>
             </div>
           )}

@@ -4,7 +4,7 @@ import { ModalContext } from '../App';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
-  const { openPartnerModal } = React.useContext(ModalContext);
+  const { openPartnerModal, openCompanyInfoModal, openTermsModal, openPrivacyModal, openCareersModal } = React.useContext(ModalContext);
   
   return (
     <footer style={{ 
@@ -118,24 +118,24 @@ const Footer: React.FC = () => {
             <h4 style={{ color: 'white', fontSize: '1.2rem', marginBottom: '1.5rem', fontWeight: 600 }}>회사 정보</h4>
             <ul style={{ listStyle: 'none', padding: 0 }}>
               <li style={{ marginBottom: '0.8rem' }}>
-                <Link to="/company-info" style={{ color: '#ADB5BD', textDecoration: 'none', transition: 'color 0.3s' }}>
+                <a href="#" onClick={e => { e.preventDefault(); openCompanyInfoModal(); }} style={{ color: '#ADB5BD', textDecoration: 'none', transition: 'color 0.3s' }}>
                   회사 소개
-                </Link>
+                </a>
               </li>
               <li style={{ marginBottom: '0.8rem' }}>
-                <Link to="/terms" style={{ color: '#ADB5BD', textDecoration: 'none', transition: 'color 0.3s' }}>
+                <a href="#" onClick={e => { e.preventDefault(); openTermsModal(); }} style={{ color: '#ADB5BD', textDecoration: 'none', transition: 'color 0.3s' }}>
                   이용 약관
-                </Link>
+                </a>
               </li>
               <li style={{ marginBottom: '0.8rem' }}>
-                <Link to="/privacy" style={{ color: '#ADB5BD', textDecoration: 'none', transition: 'color 0.3s' }}>
+                <a href="#" onClick={e => { e.preventDefault(); openPrivacyModal(); }} style={{ color: '#ADB5BD', textDecoration: 'none', transition: 'color 0.3s' }}>
                   개인정보 처리방침
-                </Link>
+                </a>
               </li>
               <li style={{ marginBottom: '0.8rem' }}>
-                <Link to="/careers" style={{ color: '#ADB5BD', textDecoration: 'none', transition: 'color 0.3s' }}>
+                <a href="#" onClick={e => { e.preventDefault(); openCareersModal(); }} style={{ color: '#ADB5BD', textDecoration: 'none', transition: 'color 0.3s' }}>
                   채용 정보
-                </Link>
+                </a>
               </li>
               <li>
                 <a href="#" onClick={e => { e.preventDefault(); openPartnerModal(); }} style={{ color: '#ADB5BD', textDecoration: 'none', transition: 'color 0.3s' }}>
