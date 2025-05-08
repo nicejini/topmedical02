@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { ModalContext } from '../App';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
+  const { openPartnerModal } = React.useContext(ModalContext);
   
   return (
     <footer style={{ 
@@ -136,9 +138,9 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/partner" style={{ color: '#ADB5BD', textDecoration: 'none', transition: 'color 0.3s' }}>
+                <a href="#" onClick={e => { e.preventDefault(); openPartnerModal(); }} style={{ color: '#ADB5BD', textDecoration: 'none', transition: 'color 0.3s' }}>
                   협력업체 모집
-                </Link>
+                </a>
               </li>
             </ul>
           </div>

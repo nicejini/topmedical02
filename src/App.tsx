@@ -12,28 +12,27 @@ import CompanyInfo from './components/CompanyInfo';
 import TermsOfService from './components/TermsOfService';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import Careers from './components/Careers';
-import Partner from './components/Partner';
 import './App.css';
 
 // 모달 상태 컨텍스트 생성
 export const ModalContext = createContext({
   openContactModal: () => {},
-  closeContactModal: () => {}
+  closeContactModal: () => {},
+  openPartnerModal: () => {},
+  closePartnerModal: () => {},
 });
 
 const App: React.FC = () => {
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+  const [isPartnerModalOpen, setIsPartnerModalOpen] = useState(false);
 
-  const openContactModal = () => {
-    setIsContactModalOpen(true);
-  };
-
-  const closeContactModal = () => {
-    setIsContactModalOpen(false);
-  };
+  const openContactModal = () => setIsContactModalOpen(true);
+  const closeContactModal = () => setIsContactModalOpen(false);
+  const openPartnerModal = () => setIsPartnerModalOpen(true);
+  const closePartnerModal = () => setIsPartnerModalOpen(false);
 
   return (
-    <ModalContext.Provider value={{ openContactModal, closeContactModal }}>
+    <ModalContext.Provider value={{ openContactModal, closeContactModal, openPartnerModal, closePartnerModal }}>
       <HashRouter basename="/">
         <div className="app">
           <Header />
@@ -44,7 +43,7 @@ const App: React.FC = () => {
                 <About />
                 <Services />
                 <ServiceDetails />
-                <Contact />
+                <Contact closeContactModal={() => {}} />
               </>
             } />
             <Route path="/services" element={<Services />} />
@@ -54,7 +53,6 @@ const App: React.FC = () => {
             <Route path="/terms" element={<TermsOfService />} />
             <Route path="/privacy" element={<PrivacyPolicy />} />
             <Route path="/careers" element={<Careers />} />
-            <Route path="/partner" element={<Partner />} />
           </Routes>
           <Footer />
           
@@ -63,6 +61,14 @@ const App: React.FC = () => {
               <div className="modal-content" onClick={e => e.stopPropagation()}>
                 <button className="close-button" onClick={closeContactModal}>×</button>
                 <Contact />
+              </div>
+            </div>
+          )}
+          {isPartnerModalOpen && (
+            <div className="modal-overlay" onClick={closePartnerModal}>
+              <div className="modal-content" onClick={e => e.stopPropagation()}>
+                <button className="close-button" onClick={closePartnerModal}>×</button>
+                <Partner closePartnerModal={closePartnerModal} />
               </div>
             </div>
           )}
