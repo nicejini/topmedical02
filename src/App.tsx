@@ -12,6 +12,7 @@ import CompanyInfo from './components/CompanyInfo';
 import TermsOfService from './components/TermsOfService';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import Careers from './components/Careers';
+import Partner from './components/Partner';
 import './App.css';
 
 // 모달 상태 컨텍스트 생성
@@ -43,7 +44,6 @@ const App: React.FC = () => {
                 <About />
                 <Services />
                 <ServiceDetails />
-                <Contact closeContactModal={() => {}} />
               </>
             } />
             <Route path="/services" element={<Services />} />
