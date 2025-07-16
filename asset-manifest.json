@@ -1,16 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.bf5c7cc3.css",
-    "main.js": "/static/js/main.ee5586c8.js",
-    "static/js/453.4cefbe9d.chunk.js": "/static/js/453.4cefbe9d.chunk.js",
-    "static/media/logo.svg": "/static/media/logo.7689b14da14200dd2bd0dc371be17e7a.svg",
-    "index.html": "/index.html",
-    "main.bf5c7cc3.css.map": "/static/css/main.bf5c7cc3.css.map",
-    "main.ee5586c8.js.map": "/static/js/main.ee5586c8.js.map",
-    "453.4cefbe9d.chunk.js.map": "/static/js/453.4cefbe9d.chunk.js.map"
+    "main.css": "/topmedical02/static/css/main.8e78d9cf.css",
+    "main.js": "/topmedical02/static/js/main.8879fa00.js",
+    "static/js/453.ba93bbbe.chunk.js": "/topmedical02/static/js/453.ba93bbbe.chunk.js",
+    "index.html": "/topmedical02/index.html",
+    "main.8e78d9cf.css.map": "/topmedical02/static/css/main.8e78d9cf.css.map",
+    "main.8879fa00.js.map": "/topmedical02/static/js/main.8879fa00.js.map",
+    "453.ba93bbbe.chunk.js.map": "/topmedical02/static/js/453.ba93bbbe.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bf5c7cc3.css",
-    "static/js/main.ee5586c8.js"
+    "static/css/main.8e78d9cf.css",
+    "static/js/main.8879fa00.js"
   ]
 }
